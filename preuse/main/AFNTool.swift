@@ -37,14 +37,7 @@ func postAlamofiredata(Url:String,parameters:NSDictionary,images:NSMutableArray,
      objchelper.checkPublicKeyCookie()
   
     
-    let currRequest = Alamofire.request(Url, method: .post, parameters: parameters, encoding:URLEncoding.default, headers: nil)
-    
-    
-    
-    currRequest.responseJSON{(responseJson) -> Void in
-        
-        
-    }
+   
         
         
      
