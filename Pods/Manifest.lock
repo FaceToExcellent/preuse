@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.6.0)
+  - DGElasticPullToRefresh (1.1)
+  - Kingfisher (4.6.1)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - DGElasticPullToRefresh
+  - Kingfisher
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: 19da16e45175f1760ac816aa7f77f7c32486b67a
+
+COCOAPODS: 1.4.0
