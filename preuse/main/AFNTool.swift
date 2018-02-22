@@ -18,7 +18,7 @@ class AFNTool: NSObject {
 func getAlamofiredata(Url:String,complated:@escaping (_ dict: Any) -> ()){
     objchelper.checkPublicKeyCookie()
     Alamofire.request(Url).responseJSON { response in
-        
+       
         let str:String =    objchelper.datatoStringUTF8(response.data as Data!)
         
         let json = objchelper.decrypt(str)

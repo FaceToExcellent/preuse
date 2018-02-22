@@ -9,31 +9,26 @@
 import UIKit
 
 class ArticleModel: NSObject {
-    var  type_name :String?
-    var   title :String?
-    var inputtime :String?
-    var id_ :String?
-    var cover: String?
-    func setmyArticleModelData(data:NSDictionary)->NSMutableArray{
-        
-        let array = data["list"] as? NSArray
-        let arr2 = NSMutableArray()
-        for i in 0 ..< array!.count{
-            let model = ArticleModel()
-            
-            let dict = (array?.object(at: i) as! NSDictionary)
-            model.type_name = dict["type_name"] as?String
-            model.title = dict["title"] as?String
-            model.inputtime = dict["inputtime"] as?String
-            model.id_ = dict["id"] as?String
-            model.cover = dict["cover"] as?String
-          
-            
-            
-            
-            arr2.add(model)
-        }
-        
-        return arr2
-    }
+    var  type:String?
+
+     var author_avatar :String?
+     var author_id :String?
+     var author_name :String?
+     var cover :String?
+     var id_ :String?
+     var inputtime :String?
+     var pic :String?
+     var title :String?
+     var type_id :String?
+     var type_name :String?
+     var wh :String?
+    
+    
+    
+    var  productsAraray: NSMutableArray?
+    //images  articles  products ad 
+//    func setmyArticleModelData(data:NSDictionary)->NSMutableArray{
+//        
+//      return 
+//    }
 }

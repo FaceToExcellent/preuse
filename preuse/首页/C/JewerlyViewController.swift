@@ -33,7 +33,7 @@ let footer = MJRefreshAutoNormalFooter()
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.view.addSubview(tableView);
-        tableView.register(UITableViewCell().classForCoder, forCellReuseIdentifier:"article")
+        tableView.register(JewerlyTableViewCell().classForCoder, forCellReuseIdentifier:"article")
         
         
         footer.setRefreshingTarget(self, refreshingAction: #selector(JewerlyViewController.myrefresh))
@@ -53,12 +53,12 @@ let footer = MJRefreshAutoNormalFooter()
     }
     func loadArticleData(){
         let reUrl = SELECTION_ARTICLE_LIST_URL + "/page/\(page)"
-         //print(page)
+       //  print(reUrl)
         getAlamofiredata(Url: reUrl) { (dict) in
             //SwiftyJSON
             //            let jsonex = JSON(dict)
             //            let mydict  = jsonex as? NSDictionary
-            //print(dict)
+            print(dict)
             //手动解析
             let mydict:NSDictionary = dict as! NSDictionary
             let Mdict = ArticleModel().setmyArticleModelData(data:mydict)
@@ -80,16 +80,17 @@ let footer = MJRefreshAutoNormalFooter()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 500 * hb()
+        return 715 * hb()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        cell = tableView.dequeueReusableCell(withIdentifier: "article", for: indexPath)
+        var cell = JewerlyTableViewCell()
+        cell = tableView.dequeueReusableCell(withIdentifier: "article", for: indexPath) as! JewerlyTableViewCell
         cell.selectionStyle = .none
-        cell.textLabel?.textColor = UIColor.black
+       // cell.textLabel?.textColor = UIColor.black
         let model:ArticleModel  = dateArray.object(at: indexPath.row) as! ArticleModel
-        cell.textLabel?.text  = model.title
+        
+        cell.setcellViews(model: model)
         return cell
     }
     
