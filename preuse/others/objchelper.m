@@ -119,7 +119,7 @@
         }
     }
     if (publicKey.length >=16) {
-        publicKey = [publicKey stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        publicKey = [publicKey stringByRemovingPercentEncoding];
         realKey = [NSString stringWithFormat:@"%@%@",[publicKey substringToIndex:5],[publicKey substringFromIndex:publicKey.length-11]];
 //                NSLog(@"publicKey:%@",publicKey);
 //                NSLog(@"realKey:%@",realKey);
@@ -135,7 +135,7 @@
     for (NSHTTPCookie *cookie in cookies) {
         if ([[[cookie properties] objectForKey:@"Name"]isEqualToString:@"fontSize"]) {
             fontSize = [[cookie properties] objectForKey:@"Value"];
-            fontSize = [fontSize stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            fontSize = [fontSize stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
             has = YES;
             break;
         }
@@ -154,7 +154,7 @@
     for (NSHTTPCookie *cookie in cookies) {
         if ([[[cookie properties] objectForKey:@"Name"]isEqualToString:@"fontSize"]) {
             
-            fontSize = [fontSize stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            fontSize = [fontSize stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
             
             NSMutableDictionary *properties = [[NSMutableDictionary alloc] initWithDictionary:cookie.properties];
             
@@ -168,7 +168,7 @@
     if (!has) {
         NSMutableDictionary *properties = [[NSMutableDictionary alloc] initWithCapacity:0];
         
-        fontSize = [fontSize stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        fontSize = [fontSize stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         [properties setObject:@"fontSize"               forKey:NSHTTPCookieName];
         [properties setObject:fontSize                  forKey:NSHTTPCookieValue];
         [properties setObject:@".xbiao.com"             forKey:NSHTTPCookieDomain];
@@ -188,7 +188,7 @@
         //*************************************
         if ([[[cookie properties] objectForKey:@"Name"]isEqualToString:name]) {
             NSString *str = [[cookie properties] objectForKey:@"Value"];
-            str = [str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            str = [str stringByRemovingPercentEncoding];
             if (isAdd) {
                 if ([str rangeOfString:value].location == NSNotFound) {
                     str = [str stringByAppendingFormat:@"|%@",value];
@@ -208,7 +208,7 @@
                 //                NSLog(@"str:%@",str);
             }
             
-            str = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            str = [str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
             
             NSMutableDictionary *properties = [[NSMutableDictionary alloc] initWithDictionary:cookie.properties];
             
@@ -223,7 +223,7 @@
     if (!has&&isAdd) {
         NSMutableDictionary *properties = [[NSMutableDictionary alloc] initWithCapacity:0];
         NSString *valueStr = [NSString stringWithFormat:@"0|%@",value];
-        valueStr = [valueStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        valueStr = [valueStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         [properties setObject:name                forKey:NSHTTPCookieName];
         [properties setObject:valueStr            forKey:NSHTTPCookieValue];
         [properties setObject:@".xbiao.com"     forKey:NSHTTPCookieDomain];
@@ -257,7 +257,7 @@
     for (NSHTTPCookie *cookie in cookiess) {
         if ([[[cookie properties] objectForKey:@"Name"]isEqualToString:@"addContrastTable"]) {
             NSString *str = [[cookie properties] objectForKey:@"Value"];
-            str = [str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            str = [str stringByRemovingPercentEncoding];
             if ([str rangeOfString:pid].location != NSNotFound) {
                 has = YES;
             }
@@ -273,7 +273,7 @@
     for (NSHTTPCookie *cookie in cookies) {
         if ([[[cookie properties] objectForKey:@"Name"]isEqualToString:name]) {
             NSString *str = [[cookie properties] objectForKey:@"Value"];
-            str = [str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            str = [str stringByRemovingPercentEncoding];
             NSArray *valueArray = [str componentsSeparatedByString:@"|"];
             NSInteger zero = 0;
             if (valueArray.count > 0) {
