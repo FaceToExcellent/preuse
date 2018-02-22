@@ -33,13 +33,21 @@ func getAlamofiredata(Url:String,complated:@escaping (_ dict: Any) -> ()){
     }
 }
 
-func postAlamofiredata(Url:String,parameters:NSDictionary,images:NSMutableArray,imageKey:String,complated:@escaping (_ dict: Any) -> ()){
+func postAlamofiredata(Url:String,parameters:Dictionary<String , Any>,images:NSMutableArray,imageKey:String,complated:@escaping (_ dict: Any) -> ()){
      objchelper.checkPublicKeyCookie()
   
-    
-   
+    objchelper.checkPublicKeyCookie()
+    Alamofire.request(Url, method: .post, parameters: parameters).responseJSON { (returnResult)in
+        let str:String =    objchelper.datatoStringUTF8(returnResult.data as Data!)
         
+        let json = objchelper.decrypt(str)
         
+        let dictdata = objchelper.string(toData: json)
+        
+        let  dict:Dictionary  = objchelper.jsontoDict(dictdata)
+        
+        complated(dict)
+    }
      
 }
 
