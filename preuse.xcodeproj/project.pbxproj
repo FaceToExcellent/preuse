@@ -229,7 +229,9 @@
 		6026B831202C08F900E586AB /* 选珠宝 */ = {
 			isa = PBXGroup;
 			children = (
-				6026B832202C08F900E586AB /* SelectionViewController.swift */,
+				607A7F0E203E646E00EB58F9 /* C */,
+				607A7F0D203E646A00EB58F9 /* V */,
+				607A7F0C203E646600EB58F9 /* M */,
 			);
 			path = "选珠宝";
 			sourceTree = "<group>";
@@ -237,7 +239,9 @@
 		6026B833202C08FA00E586AB /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				6026B834202C08FA00E586AB /* MyCenterViewController.swift */,
+				607A7F14203E648800EB58F9 /* C */,
+				607A7F13203E648500EB58F9 /* V */,
+				607A7F12203E648100EB58F9 /* M */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -245,7 +249,9 @@
 		6026B835202C08FA00E586AB /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
-				6026B836202C08FA00E586AB /* JewerlyViewController.swift */,
+				607A7F0B203E63B200EB58F9 /* C */,
+				607A7F0A203E63AC00EB58F9 /* V */,
+				607A7F09203E63A700EB58F9 /* M */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -266,7 +272,9 @@
 		6026B83D202C08FA00E586AB /* 论坛 */ = {
 			isa = PBXGroup;
 			children = (
-				6026B83E202C08FA00E586AB /* BBSViewController.swift */,
+				607A7F11203E647B00EB58F9 /* C */,
+				607A7F10203E647800EB58F9 /* V */,
+				607A7F0F203E647300EB58F9 /* M */,
 			);
 			path = "论坛";
 			sourceTree = "<group>";
@@ -284,6 +292,94 @@
 				601B439A202D61C600F924CC /* objchelper.m */,
 			);
 			path = others;
+			sourceTree = "<group>";
+		};
+		607A7F09203E63A700EB58F9 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		607A7F0A203E63AC00EB58F9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		607A7F0B203E63B200EB58F9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				6026B836202C08FA00E586AB /* JewerlyViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		607A7F0C203E646600EB58F9 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		607A7F0D203E646A00EB58F9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		607A7F0E203E646E00EB58F9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				6026B832202C08F900E586AB /* SelectionViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		607A7F0F203E647300EB58F9 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		607A7F10203E647800EB58F9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		607A7F11203E647B00EB58F9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				6026B83E202C08FA00E586AB /* BBSViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		607A7F12203E648100EB58F9 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		607A7F13203E648500EB58F9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		607A7F14203E648800EB58F9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				6026B834202C08FA00E586AB /* MyCenterViewController.swift */,
+			);
+			path = C;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
