@@ -22,34 +22,37 @@ func iPhoneX()->Bool
 /**
  屏幕宽度比
  */
-func wb() ->Float{
-    return  Float(UIScreen.main.bounds.width/750)
+func wb() ->CGFloat{
+    return  UIScreen.main.bounds.width/750
 }
 
 /**
  屏幕高度比
  */
-func hb() ->Float{
+func hb() ->CGFloat{
     if iPhoneX() {
-        return Float(UIScreen.main.bounds.height/1624)
+        return UIScreen.main.bounds.height/1624
     }else
     {
-        return Float(UIScreen.main.bounds.height/1334)
+        return UIScreen.main.bounds.height/1334
     }
 }
 
 /**
  顶部状态栏高度
  */
-func StatusBarHeight()->Float
+func StatusBarAndNavigationBarHeight()->CGFloat
 {
     if iPhoneX() {
-        return 44
+        return 88
     }else
     {
-        return 20
+        return 64
     }
 }
+
+
+
 
 class ROOTViewController: UIViewController {
 

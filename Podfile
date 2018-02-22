@@ -4,6 +4,6 @@ target 'preuse' do
   use_frameworks!
     pod 'Alamofire'
     pod 'Kingfisher'
-    pod 'DGElasticPullToRefresh'
+    pod 'MJRefresh'
     pod 'SwiftyJSON'
 end

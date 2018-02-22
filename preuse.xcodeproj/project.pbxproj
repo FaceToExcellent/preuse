@@ -26,11 +26,12 @@
 		6026B84F202C094400E586AB /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6026B84B202C094300E586AB /* images.xcassets */; };
 		6026B850202C094400E586AB /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6026B84C202C094400E586AB /* Default-667h@2x.png */; };
 		6026B857202C2B2700E586AB /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6026B858202C2B2700E586AB /* SwiftyJSON.framework */; };
-		6026B85B202C2B3300E586AB /* DGElasticPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6026B85C202C2B3300E586AB /* DGElasticPullToRefresh.framework */; };
 		6026B85D202C2B3700E586AB /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6026B85E202C2B3700E586AB /* Kingfisher.framework */; };
 		6026B876202C40D000E586AB /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6026B875202C40D000E586AB /* APIConstant.swift */; };
 		6026B879202C472D00E586AB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6026B87A202C472D00E586AB /* Alamofire.framework */; };
 		6026B88A202C595300E586AB /* AFNTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6026B889202C595300E586AB /* AFNTool.swift */; };
+		607A7F17203E669400EB58F9 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A7F16203E669400EB58F9 /* ArticleModel.swift */; };
+		607A7F18203E792C00EB58F9 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607A7F19203E792C00EB58F9 /* MJRefresh.framework */; };
 		F902A2CD322A22447A06154F /* Pods_preuse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F4D631430589B375B3AEC0 /* Pods_preuse.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		6026B887202C585100E586AB /* libapple_crypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libapple_crypto.tbd; path = usr/lib/libapple_crypto.tbd; sourceTree = SDKROOT; };
 		6026B889202C595300E586AB /* AFNTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFNTool.swift; sourceTree = "<group>"; };
 		6026B897202C5BAD00E586AB /* OBJCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OBJCHeader.h; sourceTree = "<group>"; };
+		607A7F16203E669400EB58F9 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		607A7F19203E792C00EB58F9 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		694A38AAB1703B59337C358F /* Pods-preuse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-preuse.release.xcconfig"; path = "Pods/Target Support Files/Pods-preuse/Pods-preuse.release.xcconfig"; sourceTree = "<group>"; };
 		70C6911664FB94BA3822F79F /* Pods-preuse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-preuse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-preuse/Pods-preuse.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F4D631430589B375B3AEC0 /* Pods_preuse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_preuse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,9 +104,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607A7F18203E792C00EB58F9 /* MJRefresh.framework in Frameworks */,
 				6026B879202C472D00E586AB /* Alamofire.framework in Frameworks */,
 				6026B85D202C2B3700E586AB /* Kingfisher.framework in Frameworks */,
-				6026B85B202C2B3300E586AB /* DGElasticPullToRefresh.framework in Frameworks */,
 				6026B857202C2B2700E586AB /* SwiftyJSON.framework in Frameworks */,
 				F902A2CD322A22447A06154F /* Pods_preuse.framework in Frameworks */,
 			);
@@ -138,6 +141,7 @@
 		1660E730BB1333AFEBAA1810 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				607A7F19203E792C00EB58F9 /* MJRefresh.framework */,
 				6026B887202C585100E586AB /* libapple_crypto.tbd */,
 				6026B87A202C472D00E586AB /* Alamofire.framework */,
 				6026B85E202C2B3700E586AB /* Kingfisher.framework */,
@@ -297,6 +301,7 @@
 		607A7F09203E63A700EB58F9 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				607A7F16203E669400EB58F9 /* ArticleModel.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -543,15 +548,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-preuse/Pods-preuse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/DGElasticPullToRefresh/DGElasticPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGElasticPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +598,7 @@
 				6026B843202C08FA00E586AB /* ROOTViewController.swift in Sources */,
 				6026B840202C08FA00E586AB /* MyCenterViewController.swift in Sources */,
 				601B43A7202D7CEF00F924CC /* NSData+AES.m in Sources */,
+				607A7F17203E669400EB58F9 /* ArticleModel.swift in Sources */,
 				6026B845202C08FA00E586AB /* ROOTNAVController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
