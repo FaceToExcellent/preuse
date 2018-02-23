@@ -15,6 +15,7 @@
 		6024B092203FB6F60023994B /* typeproductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6024B091203FB6F60023994B /* typeproductModel.swift */; };
 		6024B094203FB8820023994B /* typeimagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6024B093203FB8820023994B /* typeimagesModel.swift */; };
 		6024B096203FC6470023994B /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6024B095203FC6470023994B /* SelectionModel.swift */; };
+		6024B0982040142B0023994B /* SelectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6024B0972040142B0023994B /* SelectionViewCell.swift */; };
 		6026B818202C036900E586AB /* preuseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6026B817202C036900E586AB /* preuseTests.swift */; };
 		6026B823202C036900E586AB /* preuseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6026B822202C036900E586AB /* preuseUITests.swift */; };
 		6026B83F202C08FA00E586AB /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6026B832202C08F900E586AB /* SelectionViewController.swift */; };
@@ -70,6 +71,7 @@
 		6024B091203FB6F60023994B /* typeproductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeproductModel.swift; sourceTree = "<group>"; };
 		6024B093203FB8820023994B /* typeimagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeimagesModel.swift; sourceTree = "<group>"; };
 		6024B095203FC6470023994B /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
+		6024B0972040142B0023994B /* SelectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewCell.swift; sourceTree = "<group>"; };
 		6026B7FF202C036900E586AB /* preuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = preuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6026B813202C036900E586AB /* preuseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = preuseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6026B817202C036900E586AB /* preuseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preuseTests.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 		607A7F0D203E646A00EB58F9 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				6024B0972040142B0023994B /* SelectionViewCell.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				6026B841202C08FA00E586AB /* JewerlyViewController.swift in Sources */,
 				6024B092203FB6F60023994B /* typeproductModel.swift in Sources */,
 				6026B843202C08FA00E586AB /* ROOTViewController.swift in Sources */,
+				6024B0982040142B0023994B /* SelectionViewCell.swift in Sources */,
 				6026B840202C08FA00E586AB /* MyCenterViewController.swift in Sources */,
 				601B43A7202D7CEF00F924CC /* NSData+AES.m in Sources */,
 				607A7F17203E669400EB58F9 /* ArticleModel.swift in Sources */,
