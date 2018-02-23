@@ -8,7 +8,7 @@
 
 import UIKit
 import  Kingfisher
-class SelectionViewController: ROOTViewController,UITableViewDelegate,UITableViewDataSource {
+class SelectionViewController: ROOTViewController,UITableViewDelegate,UITableViewDataSource,SelectionViewCelldelegate {
     var  dataArr = NSMutableArray()
     let  headView = UIView()
     let  tableView = UITableView()
@@ -116,13 +116,25 @@ class SelectionViewController: ROOTViewController,UITableViewDelegate,UITableVie
         cell.selectionStyle = .none
         let name = self.imageArray[indexPath.row * 2] as! String
         cell.setleftData(tag: indexPath.row * 2 , imageName: name)
-        
+        cell.delegate = self;
         let name2 = self.imageArray[indexPath.row * 2 + 1] as! String
         
        cell.setrightData(tag: indexPath.row * 2 , imageName: name2)
         return cell
     }
     
+    func SelectionViewCelldelegateleft(tag: Int) {
+        let vc = SelectiondeltailViewController()
+        vc.name = self.nameArray[tag] as? String
+        vc.url = self.urlArray[tag] as? String
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func SelectionViewCelldelegateright(tag: Int) {
+        let vc = SelectiondeltailViewController()
+        vc.name = self.nameArray[tag] as? String
+        vc.url = self.urlArray[tag] as? String
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

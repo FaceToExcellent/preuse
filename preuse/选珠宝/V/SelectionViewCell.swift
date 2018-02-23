@@ -8,8 +8,15 @@
 
 import UIKit
 
-class SelectionViewCell: UITableViewCell {
+@objc protocol SelectionViewCelldelegate:NSObjectProtocol {
+   
+    @objc optional
+    func SelectionViewCelldelegateleft(tag:Int)
+    func SelectionViewCelldelegateright(tag:Int)
+}
 
+class SelectionViewCell: UITableViewCell {
+  weak var delegate : SelectionViewCelldelegate?
     let leftButton = UIButton()
     let rightButton  = UIButton()
     
@@ -43,11 +50,11 @@ class SelectionViewCell: UITableViewCell {
     
     
     func leftButtonclick(sender:UIButton){
-        
+        delegate?.SelectionViewCelldelegateleft!(tag:sender.tag)
     }
     
     func rightButtonCLick(sender:UIButton){
-        
+        delegate?.SelectionViewCelldelegateright(tag:sender.tag)
     }
     
     
