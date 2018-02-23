@@ -19,7 +19,7 @@ class SelectionViewController: ROOTViewController,UITableViewDelegate,UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        
       
         makeTitleUI()
         maketableUI()
@@ -100,10 +100,21 @@ class SelectionViewController: ROOTViewController,UITableViewDelegate,UITableVie
             
             but.imageView?.contentMode = .scaleAspectFill
             but.imageView?.clipsToBounds = true
+            
+            but.addTarget(self, action: #selector(self.buttonclick(sender:)), for: UIControlEvents.touchUpInside)
+            
             self.headView.addSubview( but)
         }
     }
-    
+      @objc  func buttonclick(sender:UIButton){
+        
+        let model:SelectionModel = dataArr[sender.tag] as! SelectionModel
+        let vc = SelectiondeltailViewController()
+        vc.name = model.name
+        vc.url =  model.url
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     //MARK: UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4 ;
@@ -127,18 +138,22 @@ class SelectionViewController: ROOTViewController,UITableViewDelegate,UITableVie
         let vc = SelectiondeltailViewController()
         vc.name = self.nameArray[tag] as? String
         vc.url = self.urlArray[tag] as? String
+        vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     func SelectionViewCelldelegateright(tag: Int) {
         let vc = SelectiondeltailViewController()
         vc.name = self.nameArray[tag] as? String
         vc.url = self.urlArray[tag] as? String
+        vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
 
 }

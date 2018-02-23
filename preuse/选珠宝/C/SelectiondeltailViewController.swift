@@ -14,8 +14,13 @@ class SelectiondeltailViewController: UIViewController {
     var  name :String? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-     self.title = name
+       self.title = name
         
+        self.navigationController?.isNavigationBarHidden = false
+        self.view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 24/255, green: 22/255, blue: 22/255, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedStringKey.foregroundColor: UIColor.black]
     }
 
     override func didReceiveMemoryWarning() {
