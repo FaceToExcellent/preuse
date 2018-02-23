@@ -37,10 +37,14 @@ class JewerlyTableViewCell: UITableViewCell {
     
     func setcellViews(model:ArticleModel){
      
-        let url = URL(string: (model.cover)!)
-        self.coverImage.kf.setImage(with: url)
-        
-        self.celltitle.text = model.title!
+        if model.type == "articles"{
+            let mod: typearticleModel = model.model as! typearticleModel
+                    let url = URL(string: (mod.cover)!)
+                    self.coverImage.kf.setImage(with: url)
+            
+                    self.celltitle.text = mod.title!
+        }
+
         
     }
     

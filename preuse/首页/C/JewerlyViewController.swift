@@ -58,12 +58,12 @@ let footer = MJRefreshAutoNormalFooter()
             //SwiftyJSON
             //            let jsonex = JSON(dict)
             //            let mydict  = jsonex as? NSDictionary
-            print(dict)
+           // print(dict)
             //手动解析
             let mydict:NSDictionary = dict as! NSDictionary
             let Mdict = ArticleModel().setmyArticleModelData(data:mydict)
             self.dateArray.addObjects(from: Mdict as! [Any])
-           // print(self.dateArray.count)
+           // print(self.dateArray)
             
             self.tableView.reloadData()
          
