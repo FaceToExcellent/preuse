@@ -33,12 +33,12 @@ let footer = MJRefreshAutoNormalFooter()
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.view.addSubview(tableView);
-        tableView.register(JewerlyTableViewCell().classForCoder, forCellReuseIdentifier:"article")
+        tableView.register(JewerlyTableViewCell.self, forCellReuseIdentifier:"article")
         
         
         footer.setRefreshingTarget(self, refreshingAction: #selector(JewerlyViewController.myrefresh))
-        //是否自动加载（默认为true，即表格滑到底部就自动加载）
-       // footer.isAutomaticallyRefresh = false
+        //是否自动加载（默认为true，即表格滑到底部就自动加载） 会造成一次性加载多个
+        footer.isAutomaticallyRefresh = false
         //刷新时不显示文字（其它情况下还是有提示文字的）
         footer.isRefreshingTitleHidden = true
         self.tableView.mj_footer = footer
@@ -49,25 +49,24 @@ let footer = MJRefreshAutoNormalFooter()
         page = page + 1
       
         loadArticleData()
-        self.tableView.mj_footer.endRefreshing()
+        
     }
     func loadArticleData(){
         let reUrl = SELECTION_ARTICLE_LIST_URL + "/page/\(page)"
-       //  print(reUrl)
+        print(reUrl)
         getAlamofiredata(Url: reUrl) { (dict) in
-            //SwiftyJSON
-            //            let jsonex = JSON(dict)
-            //            let mydict  = jsonex as? NSDictionary
+  
            // print(dict)
             //手动解析
             let mydict:NSDictionary = dict as! NSDictionary
             let Mdict = ArticleModel().setmyArticleModelData(data:mydict)
             self.dateArray.addObjects(from: Mdict as! [Any])
-           // print(self.dateArray)
-            
-            self.tableView.reloadData()
          
+            self.tableView.reloadData()
         }
+        
+        
+        self.tableView.mj_footer.endRefreshing()
     }
   
     //MARK:UITableViewDelegate
@@ -84,10 +83,13 @@ let footer = MJRefreshAutoNormalFooter()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = JewerlyTableViewCell()
-        cell = tableView.dequeueReusableCell(withIdentifier: "article", for: indexPath) as! JewerlyTableViewCell
+      // var cell = JewerlyTableViewCell.init(style: .default, reuseIdentifier: "article")
+    let   cell = tableView.dequeueReusableCell(withIdentifier: "article", for: indexPath) as! JewerlyTableViewCell
         cell.selectionStyle = .none
-       // cell.textLabel?.textColor = UIColor.black
+     
+        
+       
+        
         let model:ArticleModel  = dateArray.object(at: indexPath.row) as! ArticleModel
         
         cell.setcellViews(model: model)
