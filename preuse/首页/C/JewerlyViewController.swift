@@ -53,7 +53,7 @@ let footer = MJRefreshAutoNormalFooter()
     }
     func loadArticleData(){
         let reUrl = SELECTION_ARTICLE_LIST_URL + "/page/\(page)"
-        print(reUrl)
+        //print(reUrl)
         getAlamofiredata(Url: reUrl) { (dict) in
   
            // print(dict)
