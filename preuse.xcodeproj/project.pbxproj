@@ -37,6 +37,7 @@
 		6026B88A202C595300E586AB /* AFNTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6026B889202C595300E586AB /* AFNTool.swift */; };
 		6028D7BE2040FEF50006BB0D /* JewerlyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6028D7BD2040FEF50006BB0D /* JewerlyDetailViewController.swift */; };
 		6028D7C02041036D0006BB0D /* BBSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6028D7BF2041036D0006BB0D /* BBSModel.swift */; };
+		6028D7C2204142C30006BB0D /* BBSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6028D7C1204142C30006BB0D /* BBSTableViewCell.swift */; };
 		607A7F17203E669400EB58F9 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A7F16203E669400EB58F9 /* ArticleModel.swift */; };
 		607A7F18203E792C00EB58F9 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607A7F19203E792C00EB58F9 /* MJRefresh.framework */; };
 		607A7F1C203E98B900EB58F9 /* JewerlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A7F1B203E98B900EB58F9 /* JewerlyTableViewCell.swift */; };
@@ -108,6 +109,7 @@
 		6026B897202C5BAD00E586AB /* OBJCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OBJCHeader.h; sourceTree = "<group>"; };
 		6028D7BD2040FEF50006BB0D /* JewerlyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewerlyDetailViewController.swift; sourceTree = "<group>"; };
 		6028D7BF2041036D0006BB0D /* BBSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBSModel.swift; sourceTree = "<group>"; };
+		6028D7C1204142C30006BB0D /* BBSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBSTableViewCell.swift; sourceTree = "<group>"; };
 		607A7F16203E669400EB58F9 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		607A7F19203E792C00EB58F9 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607A7F1B203E98B900EB58F9 /* JewerlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewerlyTableViewCell.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 		607A7F10203E647800EB58F9 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				6028D7C1204142C30006BB0D /* BBSTableViewCell.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				601B43A5202D7CEF00F924CC /* SecurityUtil.m in Sources */,
 				6026B847202C08FA00E586AB /* BBSViewController.swift in Sources */,
 				6026B844202C08FA00E586AB /* AppDelegate.swift in Sources */,
+				6028D7C2204142C30006BB0D /* BBSTableViewCell.swift in Sources */,
 				6026B876202C40D000E586AB /* APIConstant.swift in Sources */,
 				6024B096203FC6470023994B /* SelectionModel.swift in Sources */,
 				607A7F1C203E98B900EB58F9 /* JewerlyTableViewCell.swift in Sources */,

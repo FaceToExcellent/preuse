@@ -30,4 +30,59 @@ import UIKit
  }*/
 class BBSModel: NSObject {
 
+    var attachment :String?
+    var author :String?
+    var authorid :String?
+    var avatar :String?
+    var dateline :String?
+    var digest :String?
+    var message :String?
+  
+    var replies :String?
+    var subject :String?
+    var tid :String?
+    var views :String?
+    var xid :String?
+    
+      var pics :NSArray?
+    
+    var type :String?
+  
+    func BBSModelsetData(data:NSDictionary)->NSMutableArray{
+        let arr = NSMutableArray()
+        //print(data)
+        let listArr = data["list"] as! NSArray
+        for i in 0 ..< listArr.count{
+           let model = BBSModel()
+           let dict = listArr.object(at: i) as! NSDictionary
+            model.type = dict["type"] as? String
+            let dic = dict["data"] as!NSDictionary
+            
+             model.attachment = dic["attachment"] as? String
+             model.author = dic["author"] as? String
+             model.authorid = dic["authorid"] as? String
+             model.avatar = dic["avatar"] as? String
+             model.dateline = dic["dateline"] as? String
+             model.digest = dic["digest"] as? String
+             model.message = dic["message"] as? String
+             model.replies = dic["replies"] as? String
+             model.subject = dic["subject"] as? String
+             model.tid = dic["tid"] as? String
+             model.views = dic["views"] as? String
+             model.xid = dic["xid"] as? String
+             model.pics = dic["pics"] as? NSArray
+            
+            
+            
+            arr.add(model)
+        }
+      
+        
+        
+        
+        
+        
+        return arr
+    }
+    
 }
