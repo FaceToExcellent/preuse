@@ -18,6 +18,7 @@ let footer = MJRefreshAutoNormalFooter()
     override func viewDidLoad() {
         super.viewDidLoad()
       loadviewUI()
+       
       loadBBSData()
     
     }
@@ -32,8 +33,11 @@ let footer = MJRefreshAutoNormalFooter()
             self.total_page = dict["total_page"] as! Int
             let arr:NSMutableArray = BBSModel().BBSModelsetData(data: dict)
             self.dateArray.addObjects(from: arr as! [Any])
-            
             self.tableView.reloadData()
+            
+            
+            let model:BBSModel = self.dateArray.lastObject as! BBSModel
+            print(model.pics  as Any)
         }
     }
 
@@ -42,7 +46,7 @@ let footer = MJRefreshAutoNormalFooter()
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.view.addSubview(tableView);
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier:"bbs")
+        tableView.register(BBSTableViewCell.self, forCellReuseIdentifier:"bbs")
         
         
         footer.setRefreshingTarget(self, refreshingAction: #selector(JewerlyViewController.myrefresh))
@@ -87,11 +91,19 @@ let footer = MJRefreshAutoNormalFooter()
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let   cell = tableView.dequeueReusableCell(withIdentifier: "bbs", for: indexPath)
+        let   cell = tableView.dequeueReusableCell(withIdentifier: "bbs", for: indexPath) as! BBSTableViewCell
         cell.selectionStyle = .none
         let model = self.dateArray.object(at: indexPath.row) as! BBSModel
-        cell.textLabel?.text = model.subject
-        cell.textLabel?.textColor = UIColor.black
+       
+        if (model.pics?.count)! > 0  {
+            cell.setcelldatawithimge(model: model)
+        }else
+        {
+            cell.setcelldataWithNOimage(model: model)
+        }
+        
+        
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

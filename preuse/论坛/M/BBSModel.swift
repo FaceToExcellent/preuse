@@ -50,7 +50,7 @@ class BBSModel: NSObject {
   
     func BBSModelsetData(data:NSDictionary)->NSMutableArray{
         let arr = NSMutableArray()
-        //print(data)
+        print(data)
         let listArr = data["list"] as! NSArray
         for i in 0 ..< listArr.count{
            let model = BBSModel()
