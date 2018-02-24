@@ -449,6 +449,7 @@ let VIDEO_LIST_URL = ADDRESS_IP(Url:"/video/list/")
 //#define BBS_FAV_THREAD_LIST_URL          ADDRESS_IP(@"/home/favoriteThreads")
 ////帖子列表
 //#define BBS_LIST_URL                     ADDRESS_IP(@"/bbs/list")
+let BBS_LIST_URL =  ADDRESS_IP(Url: "/bbs/list")
 ////发帖
 //#define BBS_POST_ADD_URL                 ADDRESS_IP(@"/bbs/post/")
 ////回帖

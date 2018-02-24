@@ -9,11 +9,22 @@
 import UIKit
 
 class BBSViewController: ROOTViewController {
-
+var  page:Int = 1;
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      loadBBSData()
+    }
+    
+    func loadBBSData(){
+        let url = (BBS_LIST_URL as String) + "/digest/1/" + "page/\(page)"
+        //http://japp.xbiao.com/apps/Jewelry/ios-Jewelry-1_5-x86_64-1242_2208/bbs/list/digest/1/page/1
+        //http://japp.xbiao.com/apps/Jewelry/ios-Jewelry-1_5-x86_64-1242_2208/bbs/list/digest/1/
+        //http://japp.xbiao.com/apps/Jewelry/ios-Jewelry-1_5-x86_64-1242_2208/bbs/list/digest/1/page/1
+       // print(url)
+        getAlamofiredata(Url: url) { (dict) in
+           // print(dict)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +33,5 @@ class BBSViewController: ROOTViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
