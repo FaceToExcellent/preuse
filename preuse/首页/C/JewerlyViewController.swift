@@ -95,7 +95,17 @@ let footer = MJRefreshAutoNormalFooter()
         cell.setcellViews(model: model)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc  = JewerlyDetailViewController()
+        vc.hidesBottomBarWhenPushed = true
+        vc.title = "文章详情"
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+         self.navigationController?.isNavigationBarHidden = true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
        
