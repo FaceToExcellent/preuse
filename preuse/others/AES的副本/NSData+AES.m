@@ -10,7 +10,7 @@
 #import <CommonCrypto/CommonCryptor.h>
 #import "GTMBase64.h"
 #define isIos7      ([[[UIDevice currentDevice] systemVersion] floatValue])
-#define gIv          @"6di50aH901duea7d"
+#define gIv          @"******************"
 
 @implementation NSData (Encryption)
 

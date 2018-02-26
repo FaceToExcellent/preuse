@@ -82,8 +82,8 @@ let model = UIDevice.current.model //设备型号
 let localizedModel = UIDevice.current.localizedModel
 
 ////向量
-//#define gIv          @"6di50aH901duea7d" //可以自行修改
-let gIv:NSString = "6di50aH901duea7d"
+//#define gIv          @"******************" //可以自行修改
+let gIv:NSString = "******************"
 ////获取屏幕 宽度、高度
 //#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 let SCREEN_WIDTH = UIScreen.main.bounds.size.width
